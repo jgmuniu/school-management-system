@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database Connection Example</title>
+</head>
+<body>
+
+    <?php
+    $sName = "localhost";
+    $uName = "root";
+    $pass  = "";
+    $db_name = "sms_db";
+
+    try {
+        $conn = new PDO("mysql:host=$sName;dbname=$db_name", $uName, $pass);
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        echo "<p>Connection successful!</p>";
+    } catch(PDOException $e) {
+        echo "<p>Connection failed: " . $e->getMessage() . "</p>";
+        exit;
+    }
+    ?>
+
+</body>
+</html>

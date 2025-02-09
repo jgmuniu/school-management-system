@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logout</title>
+    <script>
+        // Function to clear sessions and redirect
+        function logoutAndRedirect() {
+            // Clear any client-side sessions (if any)
+            // This is just an example and may not be applicable to your specific use case
+            // You may need to implement server-side logic for clearing sessions
+
+            // Redirect to login.php
+            window.location.href = 'login.php';
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Call the logoutAndRedirect function when the page loads -->
+    <script>
+        window.onload = logoutAndRedirect;
+    </script>
+
+    <!-- Display a message to the user (optional) -->
+    <p>You are being redirected to the login page...</p>
+
+</body>
+</html>
